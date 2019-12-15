@@ -4,7 +4,7 @@ import { issues as ISSUES } from './IssuesDataSource'
 import EditIssue from './EditIssue';
 import AddIssue from './AddIssue';
 
-const intialIssues = ISSUES;
+// const intialIssues = ISSUES;
 
 function reducer(issues, action) {
     switch (action.type) {
@@ -34,7 +34,7 @@ function reducer(issues, action) {
 
 export default function IssueProvider(props) {
     //const [issues, setIssue] = React.useState(ISSUES);
-    const [issues, dispatch] = React.useReducer(reducer, intialIssues);
+    const [issues, dispatch] = React.useReducer(reducer, ISSUES);
     // const [newIssue, setNewIssue] = React.useState({
     //     id: 0,
     //     issueDes: "",

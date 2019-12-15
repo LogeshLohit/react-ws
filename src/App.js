@@ -22,6 +22,12 @@ import ShoppingState from './issue-tracker/ShoppingState';
 import IssueProvider from './issues-tracker/IssueProvider';
 import IssuesTable from './issues-tracker/IssuesTable';
 import AddIssue from './issues-tracker/AddIssue';
+import ProductsCatalog from './sports-store/ProductsCatalog';
+import { Provider } from 'react-redux';
+import DisplayProducts from './sports-store/DisplayProducts';
+import ShopStore from './sports-store/ShopStore';
+import cakeStore from './cake-store/CakeStore';
+import CakeContainer from './cake-store/CakeContainer';
 class App extends React.Component {
   state = {
     heros: [
@@ -100,7 +106,7 @@ class App extends React.Component {
               }}
           </IssueContext.Consumer>
         </IssueProvider> */}
-        <IssuesTable />
+        {/* <IssuesTable /> */}
 
         {/* <IssueContext.Consumer>
           {
@@ -113,6 +119,16 @@ class App extends React.Component {
             }
           }
         </IssueContext.Consumer> */}
+
+
+
+        {/* SPORTS STORE APPLICATION */}
+
+        {/* <ProductsCatalog /> */}
+        <Provider store={ShopStore}>
+          <DisplayProducts />
+          {/* <CakeContainer/> */}
+        </Provider>
       </div>
     );
 
